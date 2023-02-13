@@ -58,7 +58,7 @@ apt install -y feh
 
 # Packages needed i3 after installation
 apt install -y rofi libnotify-bin picom xbacklight
-apt install -y vim flameshot
+apt install -y vim flameshot unzip
 
 # Install fonts
 apt install fonts-font-awesome
