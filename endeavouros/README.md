@@ -1,1 +1,1 @@
-EndeavourOS configuration backup\restore.
+# Config for EndeavourOS
