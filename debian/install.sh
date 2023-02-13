@@ -120,8 +120,8 @@ cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
 ## These two scripts will install nerdfonts and copy my configuration files into the ~/.config directory
 ## Configuration uses 
 
-source ~/i3gaps-debian/nerdfonts.sh
-source ~/i3gaps-debian/copyconf.sh
+source ~/configs/debian/nerdfonts.sh
+source ~/configs/debian/copyconf.sh
 
 apt autoremove
 
