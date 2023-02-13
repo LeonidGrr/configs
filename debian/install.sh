@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# Default packages are for the configuration and corresponding .config folders
-# Install packages after installing base Debian with no GUI
-
 # xorg display server installation
-apt install -y xorg 
+# apt install -y xorg 
 
 # Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
 apt install -y python3-pip 
@@ -59,14 +56,10 @@ apt install -y firefox-esr
 # apt install -y nitrogen 
 apt install -y feh
 
-# Required packages for i3 installation
-# apt install -y meson dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev i3status
-
 # Packages needed i3 after installation
-apt install -y dmenu rofi dunst libnotify-bin picom i3lock xbacklight
+apt install -y rofi libnotify-bin picom xbacklight
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
-# apt install -y micro
 apt install -y vim
 
 # Install fonts
@@ -76,26 +69,13 @@ apt install fonts-font-awesome
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
-# Install i3 gaps
+# Install i3
 apt install i3
-
-# Dependencies for Ly Console Manager
-# apt install -y libpam0g-dev libxcb-xkb-dev
-
-# Install Ly Console Display Manager
-# cd 
-# cd Downloads
-# git clone --recurse-submodules https://github.com/nullgemm/ly.git
-# cd ly/
-# make
-# make install
-# systemctl enable ly
 
 # Lightdm can be used instead of Ly (more common)
 # comment out all ly console display if choosing lightdm
 apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 systemctl enable lightdm
-
 
 # XSessions and i3.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
