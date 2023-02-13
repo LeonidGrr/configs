@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # xorg display server installation
-# apt install -y xorg 
+apt install -y xorg 
 
 # Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
 apt install -y python3-pip 
@@ -53,21 +53,15 @@ apt install -y firefox-esr
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
 # example if you want to use in autostart.sh for i3-gaps
-# apt install -y nitrogen 
+apt install -y nitrogen 
 apt install -y feh
 
 # Packages needed i3 after installation
 apt install -y rofi libnotify-bin picom xbacklight
-
-# Command line text editor -- nano preinstalled  -- I like micro but vim is great
-apt install -y vim
+apt install -y vim flameshot
 
 # Install fonts
 apt install fonts-font-awesome
-# apt install fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus fonts-cascadia-code
-
-# Other
-apt install -y flameshot
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
@@ -75,9 +69,8 @@ xdg-user-dirs-update
 # Install i3
 apt install i3
 
-# Lightdm can be used instead of Ly (more common)
-# comment out all ly console display if choosing lightdm
-apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+# install lightdm
+apt install -y lightdm slick-greeter lightdm-settings
 systemctl enable lightdm
 
 # XSessions and i3.desktop
