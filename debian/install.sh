@@ -69,24 +69,24 @@ sudo apt install -y exa
 sudo apt install -y python3-pip 
 
 # Microcode for Intel/AMD 
-sudo apt install -y amd64-microcode
+# sudo apt install -y amd64-microcode
 # sudo apt install -y intel-microcode 
 
 # XSessions and i3.desktop
-if [[ ! -d /usr/share/xsessions ]]; then
-    sudo mkdir /usr/share/xsessions
-fi
+# if [[ ! -d /usr/share/xsessions ]]; then
+#     sudo mkdir /usr/share/xsessions
+# fi
 
-cat > ./temp << "EOF"
-[Desktop Entry]
-Encoding=UTF-8
-Name=i3
-Comment=Dynamic window manager
-Exec=i3
-Icon=i3
-Type=XSession
-EOF
-cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
+# cat > ./temp << "EOF"
+# [Desktop Entry]
+# Encoding=UTF-8
+# Name=i3
+# Comment=Dynamic window manager
+# Exec=i3
+# Icon=i3
+# Type=XSession
+# EOF
+# cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
 
 ########################################################
 # End of script for default config
