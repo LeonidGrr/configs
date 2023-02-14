@@ -9,7 +9,7 @@ sudo apt install -y xorg
 # Install i3
 sudo apt install i3
 
-# install lightdm
+# Install lightdm
 sudo apt install -y lightdm slick-greeter lightdm-settings
 sudo systemctl enable lightdm
 
