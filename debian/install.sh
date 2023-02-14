@@ -6,13 +6,6 @@ xdg-user-dirs-update
 # xorg display server installation
 sudo apt install -y xorg 
 
-# Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
-sudo apt install -y python3-pip 
-
-# Microcode for Intel/AMD 
-sudo apt install -y amd64-microcode
-# sudo apt install -y intel-microcode 
-
 # Install i3
 sudo apt install i3
 
@@ -71,6 +64,13 @@ sudo apt install -y neofetch htop
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
 sudo apt install -y exa
+
+# Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
+sudo apt install -y python3-pip 
+
+# Microcode for Intel/AMD 
+sudo apt install -y amd64-microcode
+# sudo apt install -y intel-microcode 
 
 # XSessions and i3.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
