@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Create folders in user directory (eg. Documents,Downloads,etc.)
+xdg-user-dirs-update
+
 # xorg display server installation
 sudo apt install -y xorg 
 
@@ -62,9 +65,6 @@ sudo apt install -y vim flameshot unzip
 
 # Install fonts
 sudo apt install fonts-font-awesome
-
-# Create folders in user directory (eg. Documents,Downloads,etc.)
-xdg-user-dirs-update
 
 # Install i3
 sudo apt install i3
