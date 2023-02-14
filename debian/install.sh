@@ -30,7 +30,7 @@ sudo apt install fonts-font-awesome
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Network Manager
-sudo apt install -y network-manager-gnome networkmanager_dmenu
+sudo apt install -y network-manager-gnome
 
 # Installation for Appearance management
 sudo apt install -y lxappearance 
