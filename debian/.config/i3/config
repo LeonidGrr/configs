@@ -180,12 +180,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
 bindsym $mod+Shift+r restart
 
-# keybinding in fancy rofi (automated):
-bindsym F1 exec ~/.config/i3/scripts/keyhint-2
-# alternative
-# keybinding list in editor:
-# bindsym $mod+F1 exec xed ~/.config/i3/keybindings
-
 # Backlight control
 bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send "Brightness - ${$(xbacklight -get)%.*}%" 
 bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send "Brightness - ${$(xbacklight -get)%.*}%" 
@@ -237,9 +231,6 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# open new empty workspace
-bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
-
 # Multimedia Keys
 
 # volume
@@ -278,12 +269,10 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 # bind program to workspace and focus to them on startup:
 assign [class="kitty"] $ws1
 assign [class="(?i)firefox"] $ws2
-assign [class="TelegramDesktop"] $ws5
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=kitty] focus
 for_window [class=(?i)firefox] focus
-for_window [class=TelegramDesktop] focus
 
 ##############
 # compositor #
@@ -370,26 +359,6 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-
-bar {
-        font pango:JetBrainsMono Nerd Font 11
-        status_command ~/.local/bin/bumblebee-status \
-			-m kernel apt date time \
-			-t nord-colorful
-		position top
-		workspace_min_width 28
-	colors {
-    background #002b36
-    statusline #002b36
-    separator  #666666
-
-    focused_workspace  #E06C75 #E06C75 #1a1826
-    active_workspace   #333333 #5f676a #FFFFFF
-    inactive_workspace #333333 #222222 #888888
-    urgent_workspace   #cc241d #900000 #FFFFFF
-    binding_mode       #cc241d #900000 #FFFFFF
-  }
-}
 
 #####################################
 # Application menu handled by rofi: #

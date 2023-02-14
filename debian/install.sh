@@ -7,14 +7,14 @@ xdg-user-dirs-update
 sudo apt install -y xorg 
 
 # Install i3
-sudo apt install i3
+sudo apt install i3 i3-msg
 
 # Install lightdm
 sudo apt install -y lightdm slick-greeter lightdm-settings
 sudo systemctl enable lightdm
 
 # Packages needed i3 after installation
-sudo apt install -y rofi libnotify-bin picom xbacklight
+sudo apt install -y rofi libnotify-bin picom xbacklight polybar
 sudo apt install -y vim flameshot unzip
 
 # Desktop background browser/handler 
@@ -65,33 +65,11 @@ sudo apt install -y neofetch htop
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
 sudo apt install -y exa
 
-# Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
+# Python installed. PACKAGE INCLUDES build-essential.
 sudo apt install -y python3-pip 
 
 # Microcode for Intel/AMD 
 # sudo apt install -y amd64-microcode
 # sudo apt install -y intel-microcode 
 
-# XSessions and i3.desktop
-# if [[ ! -d /usr/share/xsessions ]]; then
-#     sudo mkdir /usr/share/xsessions
-# fi
-
-# cat > ./temp << "EOF"
-# [Desktop Entry]
-# Encoding=UTF-8
-# Name=i3
-# Comment=Dynamic window manager
-# Exec=i3
-# Icon=i3
-# Type=XSession
-# EOF
-# cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
-
-########################################################
-# End of script for default config
-#
-
 sudo apt autoremove
-
-printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
