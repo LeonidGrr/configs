@@ -11,7 +11,7 @@ sudo apt install i3
 
 # install lightdm
 sudo apt install -y lightdm slick-greeter lightdm-settings
-systemctl enable lightdm
+sudo systemctl enable lightdm
 
 # Packages needed i3 after installation
 sudo apt install -y rofi libnotify-bin picom xbacklight
@@ -41,8 +41,8 @@ sudo apt install -y thunar xfce4-settings ranger
 # System Events
 sudo apt install -y dialog avahi-daemon acpi acpid gvfs-backends
 
-systemctl enable avahi-daemon
-systemctl enable acpid
+sudo systemctl enable avahi-daemon
+sudo systemctl enable acpid
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
 sudo apt install -y kitty
@@ -51,8 +51,8 @@ sudo apt install -y kitty
 sudo apt install -y cups
 sudo apt install -y bluez blueman
 
-systemctl enable bluetooth
-systemctl enable cups
+sudo systemctl enable bluetooth
+sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
 sudo apt install -y firefox-esr 
