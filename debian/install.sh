@@ -7,7 +7,7 @@ xdg-user-dirs-update
 sudo apt install -y xorg 
 
 # Install i3
-sudo apt install i3 i3-msg
+sudo apt install i3
 
 # Install lightdm
 sudo apt install -y lightdm slick-greeter lightdm-settings
