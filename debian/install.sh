@@ -38,7 +38,7 @@ sudo apt install -y lxappearance
 sudo apt install -y thunar xfce4-settings ranger
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
-sudo apt install -y kitty
+sudo apt install -y xfce4-terminal
 
 # Browser Installation (eg. chromium)
 sudo apt install -y firefox-esr 
