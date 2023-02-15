@@ -284,7 +284,7 @@ for_window [class=TelegramDesktop] focus
 # exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Start polybar to display a workspace bar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
