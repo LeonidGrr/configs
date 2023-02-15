@@ -20,7 +20,7 @@ sudo apt install -y vim flameshot unzip
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
 # example if you want to use in autostart.sh for i3-gaps
-sudo apt install -y nitrogen 
+# sudo apt install -y nitrogen 
 sudo apt install -y feh
 
 # Install fonts
