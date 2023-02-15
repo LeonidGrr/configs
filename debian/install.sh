@@ -38,21 +38,8 @@ sudo apt install -y lxappearance
 # File Manager (eg. pcmanfm,krusader)
 sudo apt install -y thunar xfce4-settings ranger
 
-# System Events
-sudo apt install -y dialog avahi-daemon acpi acpid gvfs-backends
-
-sudo systemctl enable avahi-daemon
-sudo systemctl enable acpid
-
 # Terminal (eg. terminator,kitty,xfce4-terminal)
 sudo apt install -y kitty
-
-# Printing and bluetooth (if needed)
-sudo apt install -y cups
-sudo apt install -y bluez blueman
-
-sudo systemctl enable bluetooth
-sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
 sudo apt install -y firefox-esr 
@@ -64,6 +51,19 @@ sudo apt install -y neofetch htop
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
 sudo apt install -y exa
+
+# System Events
+sudo apt install -y dialog avahi-daemon acpi acpid gvfs-backends
+
+sudo systemctl enable avahi-daemon
+sudo systemctl enable acpid
+
+# Printing and bluetooth (if needed)
+sudo apt install -y cups
+sudo apt install -y bluez blueman
+
+sudo systemctl enable bluetooth
+sudo systemctl enable cups
 
 # Python installed. PACKAGE INCLUDES build-essential.
 sudo apt install -y python3-pip 
