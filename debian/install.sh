@@ -27,7 +27,7 @@ sudo apt install -y feh
 sudo apt install fonts-font-awesome
 
 # Sound packages
-sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
+sudo apt install -y pulseaudio alsa-utils pavucontrol
 
 # Network Manager
 sudo apt install -y network-manager-gnome
