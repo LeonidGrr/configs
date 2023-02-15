@@ -13,9 +13,8 @@ sudo apt install i3
 sudo apt install -y lightdm slick-greeter lightdm-settings
 sudo systemctl enable lightdm
 
-# Packages needed i3 after installation
-sudo apt install -y rofi libnotify-bin picom xbacklight polybar
-sudo apt install -y vim flameshot unzip
+# Other packages
+sudo apt install -y rofi libnotify-bin picom xbacklight polybar vim flameshot unzip
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
