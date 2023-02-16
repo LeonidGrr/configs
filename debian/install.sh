@@ -14,7 +14,7 @@ sudo apt install -y lightdm slick-greeter lightdm-settings
 sudo systemctl enable lightdm
 
 # Other packages
-sudo apt install -y rofi libnotify-bin picom xbacklight polybar vim flameshot unzip
+sudo apt install -y rofi libnotify-bin picom xbacklight polybar vim flameshot unzip imagemagick scrot
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
