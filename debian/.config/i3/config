@@ -229,7 +229,7 @@ bindsym $mod+a focus parent
 ## App shortcuts
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+c exec /usr/bin/codium
-bindsym $mod+w exec /usr/bin/firefox
+bindsym $mod+i exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
 
 # Power Profiles menu switcher (rofi)
@@ -377,7 +377,7 @@ set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 
 # define colors for windows:
-#class		        	border		bground		text		indicator	child_border
+#class			border		bground		text		indicator	child_border
 client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
 client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
 client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
