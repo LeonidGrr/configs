@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt update && sudo apt upgrade
+
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
@@ -15,6 +17,12 @@ sudo systemctl enable lightdm
 
 # Other packages
 sudo apt install -y rofi libnotify-bin picom xbacklight polybar vim flameshot unzip imagemagick scrot arandr
+
+# Install codium
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
+sudo apt update
+sudo apt install codium
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
