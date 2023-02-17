@@ -18,8 +18,29 @@ sudo apt install python-i3ipc
 sudo apt install -y lightdm slick-greeter lightdm-settings
 sudo systemctl enable lightdm
 
+# Install latest rofi
+sudo apt build-dep rofi 
+sudo apt install pkg-config bison flex libxkb-cursor-dev check dh-autoreconf build-essential libxkbcommon-dev
+git clone --recursive  https://github.com/davatorium/rofi.git ~/Downloads/rofi/
+cd ~/Downloads/rofi
+git submodule update --init
+autoreconf -i
+mkdir build && cd build
+../configure
+make install
+cd ~
+rm -rf ~/Downloads/rofi
+
+# Install rofi themes
+git clone --depth=1 https://github.com/adi1090x/rofi.git ~/Downloads/rofi
+cd ~/Downloads/rofi
+chmod +x setup.sh
+./setup.sh
+cd ~
+rm -rf ~/Downloads/rofi
+
 # Other packages
-sudo apt install -y rofi libnotify-bin picom xbacklight polybar vim flameshot unzip imagemagick scrot arandr
+sudo apt install -y libnotify-bin picom xbacklight polybar vim flameshot unzip imagemagick scrot arandr
 
 # Install codium
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
