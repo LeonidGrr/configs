@@ -35,7 +35,7 @@ rm -rf ~/Downloads/rofi
 git clone --depth=1 https://github.com/adi1090x/rofi.git ~/Downloads/rofi
 cd ~/Downloads/rofi
 chmod +x setup.sh
-./setup.sh
+sudo ./setup.sh
 cd ~
 rm -rf ~/Downloads/rofi
 

@@ -375,20 +375,18 @@ client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
 client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
-
-bindsym $mod+d exec rofi -modi drun -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
-
-bindsym F9 exec rofi -modi drun -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
+bindsym F9 exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
+# bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
+# bindsym F9 exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
-bindsym $mod+t exec rofi -show window \
-		-config ~/.config/rofi/rofidmenu.rasi
+# bindsym $mod+t exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
+# bindsym F10 exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
 
-bindsym F10 exec rofi -show window \
-		-config ~/.config/rofi/rofidmenu.rasi
+## rofi bindings for powermenu
+bindsym $mod+x exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
 
 ## rofi bindings for search menu (F3)
 
