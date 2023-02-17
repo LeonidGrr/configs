@@ -11,6 +11,9 @@ sudo apt install -y xorg
 # Install i3
 sudo apt install i3
 
+# Install autotiling
+sudo apt install python-i3ipc
+
 # Install lightdm
 sudo apt install -y lightdm slick-greeter lightdm-settings
 sudo systemctl enable lightdm
