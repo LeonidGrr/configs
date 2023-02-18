@@ -2,7 +2,7 @@
 yay -S polybar autotiling xkblayout-state-git htop lightdm-settings;
 
 # Bluetooth
-cp -r ./etc/bluetooth /etc/bluetooth &&
+cp -r ./bluetooth /etc/bluetooth &&
 yes | yay -S blueberry;
 sudo systemctl enable bluetooth;
 
