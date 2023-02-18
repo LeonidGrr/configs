@@ -1,51 +1,20 @@
-# exec --no-startup-id ~/set_once.sh
-# This file is a modified version based on default i3-config-wizard config
-# source is available here:
-# https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/master/.config/i3/config
-# Maintainer: joekamprad [joekamprad@endeavouros.com]
-# https://endeavouros.com
-#
-# iconic font icon search: https://fontawesome.com/v4.7/cheatsheet/
-#
-# --> to update this run the following command (will backup existing setup file)
-# wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/.config/i3/config -P ~/.config/i3/
-#
-# Endeavouros-i3 config file
-# Source for complete framework of our i3 config and theming here: https://github.com/endeavouros-team/endeavouros-i3wm-setup
-# EndeavourOS wiki holds some Information also: https://discovery.endeavouros.com/window-tiling-managers/i3-wm/
-# Please see http://i3wm.org/docs/userguide.html for the official i3 reference!
-
-#######################
-# config starts here: #
-#######################
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: JetBrainsMono Nerd Font Regular 10
+font pango:JetBrainsMono Nerd Font Regular 10
 
 # set the mod key to the winkey:
 set $mod Mod4
-
-#####################
-# workspace layout: #
-#####################
 
 # default i3 tiling mode:
 workspace_layout default
 
 # i3 stacking layout:
 # Each window will be fullscreen and tabbed top to bottom.
-#workspace_layout stacking
+# workspace_layout stacking
 
 # i3 tabbed layout:
 # Each new window will open fullscreen as a tab (left to right)
-#workspace_layout tabbed
-
-##############################
-# extra options for windows: #
-##############################
+# workspace_layout tabbed
 
 #border indicator on windows:
 new_window pixel 1
@@ -58,7 +27,7 @@ gaps inner 4
 gaps outer 2
 
 # show window title bars (not officially supported with i3gaps)
-#default_border normal
+default_border normal
 
 # window title alignment
 #title_align center
@@ -163,10 +132,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-######################################
-# keybindings for different actions: #
-######################################
-
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 
@@ -175,12 +140,6 @@ bindsym $mod+q kill
 
 # exit-menu
 bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
-
-# reload eToken
-bindsym $mod+Shift+u exec ~/.config/i3/scripts/eToken-reload
-
-# networkmanager_dmenu
-bindsym $mod+Shift+w exec networkmanager_dmenu
 
 # Lock the system
 # lock with a picture:
@@ -239,7 +198,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+g layout tabbed
+bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -279,7 +238,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+c exec /usr/bin/codium
-bindsym $mod+w exec /usr/bin/firefox
+bindsym $mod+i exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
 bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
@@ -341,7 +300,6 @@ for_window [class=TelegramDesktop] focus
 #
 # picom: https://wiki.archlinux.org/title/Picom
 # manpage: https://man.archlinux.org/man/picom.1.en
-exec_always --no-startup-id picom -b
 exec_always --no-startup-id killall picom && picom -b
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
@@ -364,10 +322,10 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 
 # start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
+# exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
 
-# configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
-exec --no-startup-id setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'
+# configure multiple keyboard layouts and hotkey to switch
+exec --no-startup-id setxkbmap -layout 'us,ru' -option 'grp:win_space_toggle'
 
 # start conky:
 # exec_always --no-startup-id conky
@@ -377,8 +335,8 @@ exec --no-startup-id setxkbmap -layout 'us,ru' -option 'grp:alt_shift_toggle'
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
-exec --no-startup-id sleep 2 && nitrogen --restore
-#exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/eos_wallpapers_community/blinky_3.png
+# exec --no-startup-id sleep 2 && nitrogen --restore
+exec_always --no-startup-id feh --bg-fill ~/.config/backgrounds/wallhaven-y8o51x_1920x1080.png
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -481,16 +439,16 @@ client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
 bindsym $mod+d exec rofi -modi drun -show drun \
 		-config ~/.config/rofi/rofidmenu.rasi
 
-#bindsym F9 exec rofi -modi drun -show drun \
-#		-config ~/.config/rofi/rofidmenu.rasi
+bindsym F9 exec rofi -modi drun -show drun \
+		-config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
 bindsym $mod+t exec rofi -show window \
 		-config ~/.config/rofi/rofidmenu.rasi
 
-#bindsym F10 exec rofi -show window \
-#		-config ~/.config/rofi/rofidmenu.rasi
+bindsym F10 exec rofi -show window \
+		-config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)
 

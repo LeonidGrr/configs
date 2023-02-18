@@ -74,7 +74,7 @@ https://discovery.endeavouros.com/window-tiling-managers/i3-wm/
 
 # change container layout (stacked, tabbed, toggle split)
 +s layout stacking
-+g layout tabbed
++w layout tabbed
 +e layout toggle split
 
 # toggle tiling / floating
@@ -98,6 +98,6 @@ https://discovery.endeavouros.com/window-tiling-managers/i3-wm/
 +p
 
 ## App shortcuts
-+w starts Firefox
++i starts Firefox
 +n starts Thunar
  Button screenshot

@@ -1,5 +1,5 @@
 # Installing packages
-yay -S nerd-fonts-complete polybar autotiling xkblayout-state-git networkmanager-dmenu-git htop base-devel;
+yay -S nerd-fonts-complete polybar autotiling xkblayout-state-git htop base-devel lightdm-settings;
 
 # Bluetooth
 cp -r ./etc/bluetooth /etc/bluetooth &&
