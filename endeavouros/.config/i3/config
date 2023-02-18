@@ -5,6 +5,10 @@ font pango:JetBrainsMono Nerd Font Regular 10
 # set the mod key to the winkey:
 set $mod Mod4
 
+#####################
+# workspace layout: #
+#####################
+
 # default i3 tiling mode:
 workspace_layout default
 
@@ -15,6 +19,10 @@ workspace_layout default
 # i3 tabbed layout:
 # Each new window will open fullscreen as a tab (left to right)
 # workspace_layout tabbed
+
+##############################
+# extra options for windows: #
+##############################
 
 #border indicator on windows:
 new_window pixel 1
@@ -131,6 +139,10 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+######################################
+# keybindings for different actions: #
+######################################
 
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
@@ -300,8 +312,7 @@ for_window [class=TelegramDesktop] focus
 #
 # picom: https://wiki.archlinux.org/title/Picom
 # manpage: https://man.archlinux.org/man/picom.1.en
-exec_always --no-startup-id killall picom && picom -b
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 
 #############################################
 # autostart applications/services on login: #

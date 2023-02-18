@@ -1,5 +1,7 @@
 mkdir -p ./.config &&
 
+cp -r ~/.config/backgrounds ./.config/backgrounds &&
+
 cp -r ~/.config/i3 ./.config/i3 &&
 
 cp -r ~/.config/rofi ./.config/rofi &&
