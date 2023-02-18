@@ -1,8 +1,8 @@
 # Installing packages
-yay -S nerd-fonts-complete polybar autotiling xkblayout-state-git htop base-devel lightdm-settings;
+yay -S polybar autotiling xkblayout-state-git htop lightdm-settings;
 
 # Bluetooth
-cp -r ./etc/bluetooth /etc/bluetooth &&
+cp -r ./bluetooth /etc/bluetooth &&
 yes | yay -S blueberry;
 sudo systemctl enable bluetooth;
 
@@ -11,7 +11,7 @@ yay -S flameshot peek vscodium-bin;
 codium;
 
 # Copy and apply user config
-cp .config ~;
+cp -pr .config ~;
 chmod +x $HOME/.config/polybar/launch.sh;
 i3-msg restart;
 
