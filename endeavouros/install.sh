@@ -1,5 +1,5 @@
 # Installing packages
-yay -S polybar autotiling xkblayout-state-git htop lightdm-settings;
+yay -S polybar autotiling xkblayout-state-git xautolock htop lightdm-settings ttf-font-awesome ttf-jetbrains-mono-nerd;
 
 # Bluetooth
 cp -r ./bluetooth /etc/bluetooth &&
