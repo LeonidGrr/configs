@@ -1,20 +1,18 @@
 /*******************************************************
  * ROFI configs i3 powermenu for EndeavourOS
- * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
     font:                   "JetBrains Mono Nerd Font 10";
-    show-icons:                     false;
+    show-icons:              false;
     icon-theme: 		    "Qogir";
-    scroll-method:                  0;
-    disable-history:                false;
+    scroll-method:          0;
+    disable-history:        false;
     sidebar-mode: 		    false;
 }
 
 /*****----- Global Properties -----*****/
 @import                          "~/.config/rofi/shared/colors.rasi"
 @import                          "~/.config/rofi/shared/fonts.rasi"
-@import                          "~/.config/rofi/arc_dark_transparent_colors.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -30,12 +28,9 @@ window {
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
-    padding:                     0px;
-    border:                      1px solid;
-    border-radius:               0px;
-    border-color:                @selected;
+    padding:                     5px;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            var(background);
 }
 
 /*****----- Main Box -----*****/
@@ -46,76 +41,52 @@ mainbox {
     padding:                     8px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
-    background-color:            transparent;
-    children:                    [ "message", "listview" ];
+    border-color:                var(selected);
+    background-color:            var(background);
+    children:                    [ "inputbar","message", "listview" ];
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     8px;
+    spacing:                     0px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
     border-radius:               0px;
-    border-color:                @selected;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", "prompt"];
+    border-color:                var(selected);
+    background-color:            var(background);
+    text-color:                  var(foreground);
+    children:                   [textbox-prompt-colon, entry, case-indicator];
+    padding:                     4px;
+}
+
+case-indicator {
+    spacing:                     0;
+    text-color:                  var(foreground);
+    background-color:            var(background);
+}
+
+entry {
+    spacing:                      0;
+    text-color:                  var(foreground);
+    background-color:            var(background);
 }
 
 textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         "";
-    padding:                     8px 12px;
-    border-radius:               0px;
-    background-color:            @urgent;
-    text-color:                  @background;
-}
-prompt {
-    enabled:                     true;
-    padding:                     8px;
-    border-radius:               0px;
-    background-color:            @active;
-    text-color:                  @background;
-}
-
-/*****----- Message -----*****/
-message {
-    enabled:                     true;
-    margin:                      0px;
-    padding:                     8px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
-}
-textbox {
-    background-color:            inherit;
-    text-color:                  inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
-    placeholder-color:           @foreground;
-    blink:                       true;
-    markup:                      true;
-}
-error-message {
-    padding:                     8px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            var(background);
+    expand:     false;
+    margin:     0px 0.3em 0em 0em ;
+    text-color: var(foreground);
+    str:        "Select power action:";
 }
 
 /*****----- Listview -----*****/
+
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       5;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -129,9 +100,9 @@ listview {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                var(selected);
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  var(foreground);
     cursor:                      "default";
 }
 
@@ -143,11 +114,12 @@ element {
     padding:                     8px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                var(selected);
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  var(foreground);
     cursor:                      pointer;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
@@ -155,6 +127,12 @@ element-text {
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
+
+element normal.normal {
+    background-color: var(background-alt);
+    text-color:       var(foreground);
+}
+
 element selected.normal {
     background-color:            var(selected);
     text-color:                  var(background);
